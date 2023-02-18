@@ -1,0 +1,3 @@
+/home/manuelpagoada/Documents/CSUEastBaySpring2023/cs301DataStucture/programmingQuiz5/cmake-build-debug/CMakeFiles/programmingQuiz5.dir
+/home/manuelpagoada/Documents/CSUEastBaySpring2023/cs301DataStucture/programmingQuiz5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/manuelpagoada/Documents/CSUEastBaySpring2023/cs301DataStucture/programmingQuiz5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
