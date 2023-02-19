@@ -1,6 +1,15 @@
 //
 // Created by manuelpagoada on 2/18/23.
 //
+/***************************************************************************************
+*    Title: <title of program/source code>
+*    Author: <author(s) names>
+*    Date: <date>
+*    Code version: <code version>
+*    Availability: <where it's located>
+*
+***************************************************************************************/
+
 #include "ItemType.h"
 #include "sorted.h"
 

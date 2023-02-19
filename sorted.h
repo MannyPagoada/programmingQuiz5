@@ -18,6 +18,14 @@
 //       LESS, if self "comes before" item
 //       GREATER, if self "comes after" item
 //       EQUAL, if self and item are the same
+/***************************************************************************************
+*    Title: <title of program/source code>
+*    Author: <author(s) names>
+*    Date: <date>
+*    Code version: <code version>
+*    Availability: <where it's located>
+*
+***************************************************************************************/
 
 class SortedType
 {
