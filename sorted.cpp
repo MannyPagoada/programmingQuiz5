@@ -24,31 +24,34 @@ int SortedType::GetLength() const
 {
     return length;
 }
-ItemType SortedType::GetItem(ItemType item, bool& found)
+ItemType SortedType::GetItem(ItemType item, ItemType[] arr)
 {
     int midPoint;
     int first = 0;
     int last = length - 1;
 
     bool moreToSearch = first <= last;
-    found = false;
-    while (moreToSearch && !found)
+
+    while (moreToSearch)
     {
-        midPoint = ( first + last) / 2;
-        switch (item.ComparedTo(info[midPoint]))
-        {
-            case LESS    : last = midPoint - 1;
-                moreToSearch = first <= last;
-                break;
-            case GREATER : first = midPoint + 1;
-                moreToSearch = first <= last;
-                break;
-            case EQUAL   : found = true;
-                item = info[midPoint];
-                break;
+        //set up midPoint
+       midPoint=(first+last)/2;
+
+        //check if x is present
+       if(arr[midPoint]==item){return midPoint;}
+
+        //check if x greater, ignore left half
+        if(arr[midPoint]<item){
+            first=midPoint+1;
+        } else {
+            //check if x is smaller, ignore right half
+            last=midPoint-1;
         }
+
+
+
     }
-    return item;
+    return midPoint;
 }
 void SortedType::DeleteItem(ItemType item, ItemType[] arr)
 {
