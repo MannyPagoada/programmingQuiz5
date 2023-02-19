@@ -3,4 +3,4 @@ project(programmingQuiz5)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(programmingQuiz5 ItemType.h ItemType.cpp testDriver.cpp)
+add_executable(programmingQuiz5 ItemType.h ItemType.cpp testDriver.cpp sorted.cpp sorted.h)

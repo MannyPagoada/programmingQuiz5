@@ -61,6 +61,12 @@ build CMakeFiles/programmingQuiz5.dir/testDriver.cpp.o: CXX_COMPILER__programmin
   OBJECT_DIR = CMakeFiles/programmingQuiz5.dir
   OBJECT_FILE_DIR = CMakeFiles/programmingQuiz5.dir
 
+build CMakeFiles/programmingQuiz5.dir/sorted.cpp.o: CXX_COMPILER__programmingQuiz5_Debug /home/manuelpagoada/Documents/CSUEastBaySpring2023/cs301DataStucture/programmingQuiz5/sorted.cpp || cmake_object_order_depends_target_programmingQuiz5
+  DEP_FILE = CMakeFiles/programmingQuiz5.dir/sorted.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/programmingQuiz5.dir
+  OBJECT_FILE_DIR = CMakeFiles/programmingQuiz5.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target programmingQuiz5
@@ -69,7 +75,7 @@ build CMakeFiles/programmingQuiz5.dir/testDriver.cpp.o: CXX_COMPILER__programmin
 #############################################
 # Link the executable programmingQuiz5
 
-build programmingQuiz5: CXX_EXECUTABLE_LINKER__programmingQuiz5_Debug CMakeFiles/programmingQuiz5.dir/ItemType.cpp.o CMakeFiles/programmingQuiz5.dir/testDriver.cpp.o
+build programmingQuiz5: CXX_EXECUTABLE_LINKER__programmingQuiz5_Debug CMakeFiles/programmingQuiz5.dir/ItemType.cpp.o CMakeFiles/programmingQuiz5.dir/testDriver.cpp.o CMakeFiles/programmingQuiz5.dir/sorted.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/programmingQuiz5.dir
   POST_BUILD = :
