@@ -1,6 +1,9 @@
 //
 // Created by manuelpagoada on 2/18/23.
 //
+#include "ItemType.h"
+#include "sorted.h"
+
 SortedType::SortedType()
 {
     length = 0;
@@ -47,43 +50,51 @@ ItemType SortedType::GetItem(ItemType item, bool& found)
     }
     return item;
 }
-void SortedType::DeleteItem(ItemType item)
+void SortedType::DeleteItem(ItemType item, ItemType[] arr)
 {
-    int location = 0;
+    //find position from getItem
 
-    while (item.ComparedTo(info[location]) != EQUAL)
-        location++;
-    for (int index = location + 1; index < length; index++)
-        info[index - 1] = info[index];
+    int index=sorted.GetItem();
+
+
+    //remove by shifting
+    for(int i= index; index<sizeof(arr);i++){
+        arr[index]=arr[index+1];
+    }
+
+    //get rid of length
     length--;
+
 }
 
-void SortedType::PutItem(ItemType item)
+void SortedType::PutItem(ItemType item, ItemType[] arr)
 {
-    bool moreToSearch;
-    int location = 0;
-
-    moreToSearch = (location < length);
-    while (moreToSearch)
-    {
-        switch (item.ComparedTo(info[location]))
-        {
-            case LESS    : moreToSearch = false;
-                break;
-            case GREATER : location++;
-                moreToSearch = (location < length);
-                break;
-        }
-    }
-    for (int index = length; index > location; index--)
-        info[index] = info[index - 1];
-    info[location] = item;
+    arr[length]=item;
     length++;
 }
 void SortedType::ResetList()
 // Post: currentPos has been initialized.
 {
     currentPos = -1;
+}
+int SortedType::searchItem(ItemType item) const
+{
+    int low = 0;
+    int high = length - 1;
+    int mid;
+
+    while (low <= high)
+    {
+        mid = (low + high) / 2;
+        if (list[mid] == item)
+            return mid;
+        else if (list[mid] < item)
+            low = mid + 1;
+        else
+            high = mid - 1;
+    }
+
+    return -1;
 }
 
 ItemType SortedType::GetNextItem()
@@ -93,3 +104,4 @@ ItemType SortedType::GetNextItem()
     currentPos++;
     return info[currentPos];
 }
+

@@ -48,7 +48,7 @@ public:
     //       someItem; otherwise found = false and item is returned.
     //       List is unchanged.
 
-    void PutItem(ItemType item);
+    void PutItem(ItemType item, ItemType[] arr);
     // Function: Adds item to list.
     // Pre:  List has been initialized.
     //       List is not full.
@@ -69,6 +69,8 @@ public:
     // Function: Initializes current position for an iteration through the list.
     // Pre:  List has been initialized.
     // Post: Current position is prior to list.
+
+    int searchItem(ItemType item)const;
 
     ItemType GetNextItem();
     // Function: Gets the next element in list.
